@@ -88,21 +88,13 @@ function back() {
 
 
     if (value == styles1) {
-       // stle.background = styles2;
-       bodyb.classList.remove('styles1')
-       bodyb.classList.add("styles2")
-      // stle.transition = "2s"
-
+       stle.background = styles2
 
     }  else if (value == styles2) {
-      //  stle.background = styles3
-      bodyb.classList.remove('styles2')
-      bodyb.classList.add("styles3")
+      stle.background = styles3
+
     } else if (value == styles3) {
-      //  stle.background = styles1
-      bodyb.classList.remove('styles3')
-      bodyb.classList.add("styles1")
-     
+      stle.background = styles1     
     }
     
 setTimeout(back, 6000);
