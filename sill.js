@@ -5,9 +5,7 @@
     let nam = document.getElementById("name");
 
     
-let skill =[ {"name": "ux", "rate": "50%"},
-
-    {"name": "ui", "rate": "90%"},
+let skill =[ 
     {"name": "Interaction Design", "rate":"70%" },
     {"name": "Wireframing", "rate":"100%" },
     {"name": "Product Design", "rate": "70%"},
@@ -22,7 +20,6 @@ let skill =[ {"name": "ux", "rate": "50%"},
     {"name": "Design Thinking", "rate": "80%"},
     {"name": "User Research", "rate": "30%"},
     {"name": "Coding", "rate": "70%"},
-
 
 
 ]
