@@ -1,0 +1,27 @@
+.tools, .codes {
+    text-align: center;
+    margin: auto;
+}
+.tool, .code {
+    display: inline-grid;
+    text-align: center;   
+    margin: 2%;
+}
+
+.tool:hover, .code:hover {
+    background: #80db56;
+    color: #000000;
+    border-radius: 10%;
+}
+
+
+.welcome:hover {
+    background-color: #1c1d25;
+}
+
+
+.tools img, .codes img {
+    width: 70px;
+    text-align: center;
+    margin: auto;
+}
