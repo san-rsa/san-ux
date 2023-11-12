@@ -3,7 +3,15 @@
     let head = document.getElementById("head");
     let nme = document.getElementById("nme");
     let nam = document.getElementById("name");
+    let years = document.getElementById("date");
+    let mep = document.getElementById("mep");
 
+    var date = new Date();
+
+    date.getYear("");
+console.log(date);
+
+years.innerHTML = "2023";
     
 let skill =[ 
     {"name": "Interaction Design", "rate":"70%" },
@@ -32,6 +40,9 @@ function addNavLogo() {
     me.classList.add("navm");
     nav.classList.add("navb");
     nam.classList.add("name");
+    // mep.classList.remove("mew");
+    mep.style.minWidth = "0"
+   
  
 
 }
@@ -41,9 +52,12 @@ function removeNavLogo() {
     nav.style.transition = "2s"
     me.style.transition = "2s"
     nme.appendChild(me);
-    me.classList.remove("navm")
-    nav.classList.remove("navb")
-    nam.classList.remove("name")  
+    me.classList.remove("navm");
+    nav.classList.remove("navb");
+    nam.classList.remove("name");
+    // mep.classList.add("mew");
+    mep.style.minWidth = "300px"
+
 
 }
 
@@ -51,38 +65,37 @@ var myScrollFunc = function() {
   var y = window.scrollY;
   if (y >= 500) {
     addNavLogo();
-  } else if (y <= 500) {
-    removeNavLogo()
+  } else if (y < 650) {
+    removeNavLogo();
   }
 };
 
 window.addEventListener("scroll", myScrollFunc);
 
-var  values = ""
-var   stle  = ""
-
 
 function back() {
-    
  var bodyb = document.querySelector("body");
- stle = bodyb.style;
+ var stle = bodyb.style;
+ var value = window.getComputedStyle(bodyb).getPropertyValue('background-color');
 
 
-
-     values = window.getComputedStyle(bodyb).getPropertyValue('background').slice(17, 128);
-
-
-    var value = values
+    // styles1 ="linear-gradient(170deg, rgb(22, 53, 57) 36.75%, rgba(40, 71, 132, 0.96) 61.09%, rgba(49, 165, 81, 0.92) 92.43%)"
 
 
-
-    styles1 ="linear-gradient(170deg, rgb(22, 53, 57) 36.75%, rgba(40, 71, 132, 0.96) 61.09%, rgba(49, 165, 81, 0.92) 92.43%)"
-
-
-    styles2 = "linear-gradient(170deg, rgba(49, 165, 81, 0.92) 36.75%, rgb(22, 53, 57) 61.09%, rgba(40, 71, 132, 0.96) 92.43%)"
+    // styles2 = "linear-gradient(170deg, rgba(49, 165, 81, 0.92) 36.75%, rgb(22, 53, 57) 61.09%, rgba(40, 71, 132, 0.96) 92.43%)"
 
 
-    styles3 = "linear-gradient(170deg, rgba(40, 71, 132, 0.96) 36.75%, rgba(49, 165, 81, 0.92) 61.09%, rgb(22, 53, 57) 92.43%)"
+    // styles3 = "linear-gradient(170deg, rgba(40, 71, 132, 0.96) 36.75%, rgba(49, 165, 81, 0.92) 61.09%, rgb(22, 53, 57) 92.43%)"
+
+    styles1 ="rgb(22, 53, 57)"
+
+
+    styles2 = "rgba(49, 165, 81, 0.92)"
+
+
+    styles3 = "rgba(40, 71, 132, 0.96)"
+    
+    console.log(value);
     
 
 
@@ -97,7 +110,7 @@ function back() {
       stle.background = styles1     
     }
     
-setTimeout(back, 6000);
+setTimeout(back, 5000);
 }
 
 back()
